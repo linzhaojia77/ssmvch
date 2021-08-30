@@ -1,0 +1,6 @@
+lzj\baba\config\MultipartConfig.class
+lzj\baba\repository\EmailRepository.class
+lzj\baba\service\EmailService.class
+lzj\baba\service\impl\EmailServiceImpl.class
+lzj\baba\domain\vo\EmailVo.class
+lzj\baba\domain\EmailConfig.class

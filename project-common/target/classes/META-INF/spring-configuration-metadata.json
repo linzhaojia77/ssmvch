@@ -1,0 +1,85 @@
+{
+  "groups": [
+    {
+      "name": "file",
+      "type": "lzj.baba.config.FileProperties",
+      "sourceType": "lzj.baba.config.FileProperties"
+    },
+    {
+      "name": "file.linux",
+      "type": "lzj.baba.config.FileProperties$ElPath",
+      "sourceType": "lzj.baba.config.FileProperties"
+    },
+    {
+      "name": "file.mac",
+      "type": "lzj.baba.config.FileProperties$ElPath",
+      "sourceType": "lzj.baba.config.FileProperties"
+    },
+    {
+      "name": "file.path",
+      "type": "lzj.baba.config.FileProperties$ElPath",
+      "sourceType": "lzj.baba.config.FileProperties",
+      "sourceMethod": "getPath()"
+    },
+    {
+      "name": "file.windows",
+      "type": "lzj.baba.config.FileProperties$ElPath",
+      "sourceType": "lzj.baba.config.FileProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "file.avatar-max-size",
+      "type": "java.lang.Long",
+      "description": "头像大小限制",
+      "sourceType": "lzj.baba.config.FileProperties"
+    },
+    {
+      "name": "file.linux.avatar",
+      "type": "java.lang.String",
+      "sourceType": "lzj.baba.config.FileProperties$ElPath"
+    },
+    {
+      "name": "file.linux.path",
+      "type": "java.lang.String",
+      "sourceType": "lzj.baba.config.FileProperties$ElPath"
+    },
+    {
+      "name": "file.mac.avatar",
+      "type": "java.lang.String",
+      "sourceType": "lzj.baba.config.FileProperties$ElPath"
+    },
+    {
+      "name": "file.mac.path",
+      "type": "java.lang.String",
+      "sourceType": "lzj.baba.config.FileProperties$ElPath"
+    },
+    {
+      "name": "file.max-size",
+      "type": "java.lang.Long",
+      "description": "文件大小限制",
+      "sourceType": "lzj.baba.config.FileProperties"
+    },
+    {
+      "name": "file.path.avatar",
+      "type": "java.lang.String",
+      "sourceType": "lzj.baba.config.FileProperties$ElPath"
+    },
+    {
+      "name": "file.path.path",
+      "type": "java.lang.String",
+      "sourceType": "lzj.baba.config.FileProperties$ElPath"
+    },
+    {
+      "name": "file.windows.avatar",
+      "type": "java.lang.String",
+      "sourceType": "lzj.baba.config.FileProperties$ElPath"
+    },
+    {
+      "name": "file.windows.path",
+      "type": "java.lang.String",
+      "sourceType": "lzj.baba.config.FileProperties$ElPath"
+    }
+  ],
+  "hints": []
+}

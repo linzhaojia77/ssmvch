@@ -1,0 +1,55 @@
+server:
+  port: 8000
+spring:
+  freemarker:
+    check-template-location: false
+  profiles:
+    active: dev
+  jackson:
+    time-zone: GMT+8
+  data:
+    redis:
+      repositories:
+        enabled: false
+  #配置 Jpa
+  jpa:
+    hibernate:
+      ddl-auto: none
+    open-in-view: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+
+  redis:
+    #数据库索引
+    database: ${REDIS_DB:0}
+    host: ${REDIS_HOST:127.0.0.1}
+    port: ${REDIS_PORT:6379}
+    password: ${REDIS_PWD:}
+    #连接超时时间
+    timeout: 5000
+
+task:
+  pool:
+    # 核心线程池大小
+    core-pool-size: 10
+    # 最大线程数
+    max-pool-size: 30
+    # 活跃时间
+    keep-alive-seconds: 60
+    # 队列容量
+    queue-capacity: 50
+
+#七牛云
+qiniu:
+  # 文件大小 /M
+  max-size: 15
+
+#邮箱验证码有效时间/秒
+code:
+  expiration: 300
+
+#密码加密传输，前端公钥加密，后端私钥解密
+rsa:
+  private_key: MIICeAIBADANBgkqhkiG9w0BAQEFAASCAmIwggJeAgEAAoGBAMdSjmcxCxQ0syCi48Q+uOfKxzJfy29dbFwPicBIoisZOSqr9ObSPfweDCHCZF/xWSDRL73cIb2DkHThECJr9aJ0BeZYUGU5Mtxa8q4a7YvhLKR2Dvsb2xeV93Fa25kNLHj4FsV/vnOpQrpO3RD4SDWTi/sxVlMXi3lqyeJURDNJAgMBAAECgYBxFyY05l6i2EPKAKG6dtvyp9rdefyy8w7ILQi7UHqyeV02GNqbHC6PHX1EqkbJKOao+Adeccey/zK3HftJjHeQ86VBLfuXDV71sBzhJ1VE/tbUouj+d/0KXRFJniDrK3RXLskWGJHo230EmI0IINFvVBHOtcw91seypKrCzbw5AQJBAPRF1hZKvoQEz2NN5G7gkX3m1v184FJL1/e1GfY0I7ut51MszDMV5yhtt2dnjIw78pngFlmlD62XLe7QTr44qdcCQQDQ5EVwv/+mtUzA4Qim1EYJMdc1LBd51pzZjWvGnpT1MB7XXPEi9vgke1g8YJVKYoMMK28lDlG2lX8sBTOVK6ffAkEA3BFqveya1U+ME7giG+4/xYDJodf2NM5VhLno6NGye6xB4sJSOZf7CIZIHGXCzrhXaV/kYuD9TfQMksGin2dnQwJBAKMrK/K+hvu5cpLXNOLbvTlBbVFjd5L8SNjG1wD2rnQ3el/PgaxGLd6RWoMPDo5kFOlUpCTV4o40iHniNkC3MRECQQDMKjcie9nR2unyI56So2mvjy1obNwaUrHtKQeAh7suDSrhszsapvLKEwYnUk3d6Y/dIIfIHkt2st5JX0l6vD0++OMjWQl9WitG9pB6tSCQIDAQABAkA2SimBrWC2/wvauBuYqjCFwLvYiRYqZKThUS3MZlebXJiLB+Ue/gUifAAKIg1avttUZsHBHrop4qfJCwAI0+YRAiEA+W3NK/RaXtnRqmoUUkb59zsZUBLpvZgQPfj1MhyHDz0CIQDYhsAhPJ3mgS64NbUZmGWuuNKp5coY2GIj/zYDMJp6vQIgUueLFXv/eZ1ekgz2Oi67MNCk5jeTF2BurZqNLR3MSmUCIFT3Q6uHMtsB9Eha4u7hS31tj1UWE+D+ADzp59MGnoftAiBeHT7gDMuqeJHPL4b+kC+gzV4FGTfhR9q3tTbklZkD2A==
+  rub: qWbP49GSnM5e5UfEYpg1FDU+uVMRJiLFg6TN5rINQYnfWniFxj7i2/hbb98ivcb26AHUMic5jWgpkEdnXbPHSuhC4rDQFbMhAij356GdJ95hdI1BV0Twfu4OAm0brE3DBYdorHIkCBnSVklfdPpqt2LAqjAYGMOjMFFsxKWeKDs=(公钥加密123456后的密文)
